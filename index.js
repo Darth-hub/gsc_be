@@ -43,7 +43,10 @@ export const db = getFirestore();
 import UserRouter from './Routes/User.js'
 import PickupRouter from './Routes/PickUp.js'
 
-app.use(cors({ origin: "https://your-frontend.netlify.app" }));
+app.use(cors({ 
+    origin: "https://your-frontend.netlify.app",
+    credentials: true
+}));
 app.use(express.json())
 app.use(express.urlencoded({
     extended: true,
