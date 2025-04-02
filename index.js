@@ -43,8 +43,10 @@ export const db = getFirestore();
 import UserRouter from './Routes/User.js'
 import PickupRouter from './Routes/PickUp.js'
 
-app.use(cors({ 
-    origin: "https://your-frontend.netlify.app",
+app.use(cors({
+    origin: "https://eclyra.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
 app.use(express.json())
